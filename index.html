@@ -1,35 +1,89 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>TNet Portal</title>
+  <meta charset="UTF-8">
+  <title>TNet App</title>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <h1>🔥 TNet Control Panel</h1>
+  <!-- ================= NAVBAR ================= -->
+  <nav class="navbar">
 
-  <!-- API KEY INPUT -->
-  <div class="card">
-    <h3>Enter API Key</h3>
-    <input id="apiKeyInput" placeholder="tnet_xxx">
-    <button onclick="saveKey()">Save</button>
-  </div>
+    <div class="logo">
+      🔥 TNet
+    </div>
 
-  <!-- USAGE -->
-  <div class="card">
-    <h3>Usage</h3>
-    <p id="usage">0 requests</p>
-  </div>
+    <div class="nav-items">
 
-  <!-- TEST IMAGE -->
-  <div class="card">
-    <h3>Test Image API</h3>
-    <input id="imageUrl" placeholder="Image URL">
-    <button onclick="analyzeImage()">Analyze</button>
+      <button onclick="showPage('home')">
+        <i class="fa-solid fa-house"></i>
+        Home
+      </button>
 
-    <pre id="result"></pre>
-  </div>
+      <button onclick="showPage('developers')">
+        <i class="fa-solid fa-code"></i>
+        Developers
+      </button>
 
+      <button onclick="showPage('enterprise')">
+        <i class="fa-solid fa-building"></i>
+        Enterprise
+      </button>
+
+      <button onclick="showPage('market')">
+        <i class="fa-solid fa-store"></i>
+        Market
+      </button>
+
+      <button onclick="showPage('profile')">
+        <i class="fa-solid fa-user"></i>
+        Profile
+      </button>
+
+    </div>
+
+  </nav>
+
+  <!-- ================= MAIN APP ================= -->
+
+  <main>
+
+    <!-- HOME -->
+    <section id="home" class="page">
+      <h1>Home</h1>
+    </section>
+
+    <!-- DEVELOPERS -->
+    <section id="developers" class="page hidden">
+      <h1>Developers</h1>
+    </section>
+
+    <!-- ENTERPRISE -->
+    <section id="enterprise" class="page hidden">
+      <h1>Enterprise</h1>
+    </section>
+
+    <!-- MARKET -->
+    <section id="market" class="page hidden">
+      <h1>Market</h1>
+    </section>
+
+    <!-- PROFILE -->
+    <section id="profile" class="page hidden">
+      <h1>Profile</h1>
+    </section>
+
+  </main>
+
+  <!-- JS -->
   <script src="script.js"></script>
+
 </body>
 </html>
